@@ -1,0 +1,17 @@
+$bordeMarron: #76260085;
+$chocolate: chocolate;
+$crema: #FBEEE6;
+$gradienteColor1:rgba(252,235,225,1) 0%;
+$gradienteColor2:rgba(251,238,230,1) 78%;
+$gradienteColor3:rgba(255,255,255,1) 91%;
+$floralwhite: floralwhite;
+$tamanioTitulo: 55px;
+$tamanioEnlacesFooter: 35px;
+$colorForm:rgba(210, 105, 30, 0.644);
+
+// Mixin borde redondeados
+@mixin bordeRedondeado {
+    border-bottom: solid 8px $bordeMarron;
+    border-radius: 20%;
+    margin-bottom: 20px;
+}

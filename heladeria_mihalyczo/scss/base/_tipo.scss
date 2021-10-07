@@ -1,0 +1,25 @@
+// Tipografias 
+@import "utilities/variables";
+body{
+    h2{
+        margin-bottom: 30px;
+        color: $chocolate;
+    }
+    p{
+        font-family: 'Roboto', sans-serif;
+        color: $chocolate;
+        background-color: $floralwhite;
+        border-radius: 11px;
+        letter-spacing: 1px;
+        font-size: 20px;
+        padding: 5px;
+        line-height: 26px;
+    }
+    a{
+        text-decoration: none;
+        color: $chocolate;
+    }
+    li{
+        list-style: none;
+    }
+}
