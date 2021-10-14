@@ -1,27 +1,22 @@
 // Estilos del header 
 header{
     nav{
-        .containerNav__imagenHeader--posicion{
-            background-image: url(./pics/headerHelados.jpg) !important;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
         .containerNav__imagenLogo--tamanio{
             width: 150px;
             border: solid black 1px;
             border-radius: 50%;
         }
         .containerNav__items--estiloFuente{
-            font-size: 30px;
+            font-size: 1.8rem;
             font-weight: 600;
-            color: $chocolate !important;
+            color: $colorFrioGral !important;
             padding: 0px 1rem !important;
-            margin-bottom: .5rem;
-            background-color: $crema;
-            border-radius: 20%;
-            border: solid black 1px;
+            margin-bottom: 1.5rem;
+            background-color: $fondoClaro;
+            border-radius: 4%;
+            border: solid black 1px !important;
             &:hover{
-                color: black !important;
+                color: red !important;
             }
         }
     }

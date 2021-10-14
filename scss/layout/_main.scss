@@ -2,33 +2,22 @@
 @import "layout/responsive";
 @import "utilities/variables";
 
-body{
-    #fondoError:hover{
-        background-image: url("../pics/heladoCaido.png") !important;
-        background-position: center;
-        background-size: 100vh;
-    }
-}
 main{
-    h1{
-        color: $chocolate;
-        text-decoration: underline;
-        text-align: center;
-        font-size: $tamanioTitulo;
-        margin-top: 30px;
-        margin-bottom: 80px;
-        @include tablet{
-            font-size: $tamanioTitulo - 10;
-        }
-        @include movil{
-            font-size: $tamanioTitulo - 15;
-        }
+    .main__heroSection--bg{
+        background-image:linear-gradient(rgba(0,0,0, .9), rgba(0,0,0, .9)), url('../pics/heroSection.jpg');
+        background-size:cover;
+        background-position: top top;
+        background-attachment: fixed;
+        align-items: center;
+        justify-content: center;
     }
-    .main__containerFotosHome--tamanioSombra{
-        margin-bottom: 50px;
-        border-bottom: solid 8px $bordeMarron;
-        border-radius: 20%;
-        box-shadow: 10px 10px 16px -1px rgba(0,0,0,0.75);
+    #hero .container{
+        height: 50vh;
+    }
+    .hero__p--style{
+        color: white;
+        letter-spacing: 0.2rem;
+        font-weight: 200;
     }
     .aside__containerProductos--alinear{
         display:flex;
@@ -41,23 +30,7 @@ main{
         width: 150px;
         &:hover{
             transform: scale(1.08);
-            border: solid $chocolate 1px;
-        }
-    }
-    .containerFotosPrecio__fotos--tamanio{
-        position: relative;
-        width: 100%;
-        border-bottom: solid 8px $bordeMarron;
-        border-radius: 20%;
-        margin-bottom: 20px;
-        display:flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        @include tablet{
-            display: none;
-        }
-        @include movil{
-            display: none;
+            border: solid $colorFrioGral 1px;
         }
     }
     .productos__columnaTabla{
@@ -74,24 +47,14 @@ main{
             }
         }
     }
-    .main__recetaTitulo{
-        text-align: center;
-        @include tablet{
-        }
-        @include movil{
-            display: none;
-        }
-    }
-    .main__contenedorReceta--esVisible{
-        display: flex;
-        justify-content: center;
-        @include tablet{
-            display: flex;
-            justify-content: center;
-        }
-        @include movil{
-            display: none;
-        }
+    .containerFotosPrecio__fotos--tamanio{
+        position: relative;
+        width: 100%;
+        border-color: chocolate;
+        border-radius: 20%;
+        margin-bottom: 20px;
+        display:flex;
+        flex-direction: column;
     }
     .ContainerStaff__fotoDuenos--tamanio{
         width:100%;
@@ -104,28 +67,13 @@ main{
             display: none;
         }
     }
-    .historia__columna1, .historia__columna2{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        p{
-            width: 50%;
-            margin-right: 30px;
-        }
-        @include movil{
-            flex-direction: column;
-            p{
-                width: 100%;
-            }
-        }
-    }
     .incorporate__email--tamanioFuente{
         font-size: 2rem;
         @include tablet{
             font-size: 3rem;
         }
         @include movil{
-            font-size: 1.7rem;
+            font-size: 1.3rem;
         }
     }
     .main__contenedorMapa--tamanio{
@@ -139,10 +87,5 @@ main{
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-    }
-    .formulario__imagenFormulario{
-        @extend .containerFotosPrecio__fotos--tamanio;
-        width: 50%;
-        
     }
 }

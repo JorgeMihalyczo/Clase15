@@ -1,23 +1,30 @@
 // Tipografias 
 @import "utilities/variables";
 body{
+    .title{
+        text-align: center;
+        text-decoration: underline;
+        color: $colorFrioGral;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+    }
     h2{
+        font-size: 1.8rem;
+        margin-top: 2rem;
         margin-bottom: 30px;
-        color: $chocolate;
+        color: $colorFrioGral;
     }
     p{
         font-family: 'Roboto', sans-serif;
-        color: $chocolate;
-        background-color: $floralwhite;
+        color: $colorFrioGral;
         border-radius: 11px;
         letter-spacing: 1px;
-        font-size: 20px;
-        padding: 5px;
-        line-height: 26px;
-    }
+        font-size: 1.5rem;
+        padding: 1.5rem;
+    } 
     a{
         text-decoration: none;
-        color: $chocolate;
+        color: $colorFrioGral;
     }
     li{
         list-style: none;

@@ -1,19 +1,17 @@
 // Estilos del footer 
 footer{
-    background-image: url("../pics/banderaClara.jpg");
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background: linear-gradient(180deg, rgba(244,249,249,1) 0%, rgba(204,242,244,1) 50%, rgba(70,187,247,1) 100%);
     border-top: solid 2px black;
     margin-top: 100px;
-    padding: 20px;
+    padding-left: 0rem;
+    max-height: 100vh;
     &>ul{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-evenly !important;
+        justify-content: space-around !important;
         @include tablet{
-            justify-content: space-between !important;
+            justify-content: space-around !important;
         }
     }
     li:hover{
@@ -21,14 +19,15 @@ footer{
     }
     .footer__enlacesEstilo{
         font-weight: 600;
-        font-size: 35px;
+        font-size: 1.5rem;
         font-style: italic;
-        justify-content: space-between;
+        justify-content: space-around;
         @include tablet{
-            justify-content: space-evenly !important;
+            justify-content: space-around !important;
             font-size: $tamanioEnlacesFooter - 5;
         }
         @include movil{
+            justify-content: left !important;
             font-size: $tamanioEnlacesFooter - 9;
         }
     }
