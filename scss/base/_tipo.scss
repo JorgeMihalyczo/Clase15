@@ -9,17 +9,22 @@ body{
         margin-bottom: 4rem;
     }
     h2{
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        text-align: center;
         margin-top: 2rem;
         margin-bottom: 30px;
         color: $colorFrioGral;
+    }
+    h3{
+        font-size: 1.4rem;
+        text-align: center;
     }
     p{
         font-family: 'Roboto', sans-serif;
         color: $colorFrioGral;
         border-radius: 11px;
         letter-spacing: 1px;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         padding: 1.5rem;
     } 
     a{

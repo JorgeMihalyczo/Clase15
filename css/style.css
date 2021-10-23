@@ -13,17 +13,22 @@ body .title {
   margin-bottom: 4rem; }
 
 body h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  text-align: center;
   margin-top: 2rem;
   margin-bottom: 30px;
   color: #0a3955; }
+
+body h3 {
+  font-size: 1.4rem;
+  text-align: center; }
 
 body p {
   font-family: 'Roboto', sans-serif;
   color: #0a3955;
   border-radius: 11px;
   letter-spacing: 1px;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   padding: 1.5rem; }
 
 body a {
@@ -71,6 +76,9 @@ main .aside__containerProductos--alinear {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around; }
+  @media screen and (max-width: 426px) {
+    main .aside__containerProductos--alinear {
+      display: grid; } }
 
 main .aside__containerProductos--border {
   border-radius: 50%;
@@ -136,6 +144,7 @@ footer {
   border-top: solid 2px black;
   margin-top: 100px;
   padding-left: 0rem;
+  padding-bottom: 15px;
   max-height: 100vh; }
   footer > ul {
     display: flex;
@@ -154,12 +163,14 @@ footer {
     justify-content: space-around; }
     @media screen and (max-width: 768px) {
       footer .footer__enlacesEstilo {
-        justify-content: space-around !important;
-        font-size: 30px; } }
+        justify-content: space-around !important; } }
     @media screen and (max-width: 426px) {
       footer .footer__enlacesEstilo {
-        justify-content: left !important;
-        font-size: 26px; } }
+        display: grid;
+        justify-content: left !important; } }
+  @media screen and (max-width: 768px) {
+    footer .footer__incorporate--oculto {
+      display: none; } }
 
 form {
   width: 400px;

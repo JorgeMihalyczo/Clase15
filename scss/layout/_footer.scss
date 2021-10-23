@@ -4,6 +4,7 @@ footer{
     border-top: solid 2px black;
     margin-top: 100px;
     padding-left: 0rem;
+    padding-bottom: 15px;
     max-height: 100vh;
     &>ul{
         display: flex;
@@ -24,11 +25,15 @@ footer{
         justify-content: space-around;
         @include tablet{
             justify-content: space-around !important;
-            font-size: $tamanioEnlacesFooter - 5;
         }
         @include movil{
+            display: grid;
             justify-content: left !important;
-            font-size: $tamanioEnlacesFooter - 9;
+        }
+    }
+    .footer__incorporate--oculto{
+        @include tablet{
+            display: none;
         }
     }
 }
