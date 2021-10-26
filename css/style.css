@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box; }
   * body {
-    background-color: white; }
+    background-color: #fbf8f5; }
 
 body .title {
   text-align: center;
@@ -87,25 +87,55 @@ main .aside__containerProductos--border {
     transform: scale(1.08);
     border: solid #0a3955 1px; }
 
-@media screen and (max-width: 768px) {
-  main .productos__columnaTabla {
-    width: 100% !important; } }
-
-main .productos__tabla--tamanio {
-  width: 100%; }
-  @media screen and (max-width: 426px) {
-    main .productos__tabla--tamanio th, main .productos__tabla--tamanio tr, main .productos__tabla--tamanio td, main .productos__tabla--tamanio table {
-      padding: 1px;
-      margin: 1px; } }
-
-main .containerFotosPrecio__fotos--tamanio {
+main .productos__contenedorTabla {
   position: relative;
-  width: 100%;
-  border-color: chocolate;
-  border-radius: 20%;
-  margin-bottom: 20px;
+  width: 85%;
+  background-color: #CCF2F4;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 50px;
+  margin: 50px auto;
+  border: black solid 2px; }
+  @media screen and (max-width: 768px) {
+    main .productos__contenedorTabla {
+      grid-auto-rows: auto; } }
+  @media screen and (max-width: 426px) {
+    main .productos__contenedorTabla {
+      margin: 0;
+      width: 98%;
+      grid-auto-rows: auto; } }
+
+main .table__header {
+  position: relative;
+  background-color: #0a3955;
+  color: white;
+  font-size: 1.2rem;
   display: flex;
-  flex-direction: column; }
+  justify-content: center;
+  align-items: center; }
+  @media screen and (max-width: 768px) {
+    main .table__header {
+      display: flex;
+      justify-content: left; } }
+  @media screen and (max-width: 426px) {
+    main .table__header {
+      display: flex;
+      justify-content: left; } }
+
+main .table__item {
+  font-size: 1.1rem;
+  padding: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media screen and (max-width: 768px) {
+    main .table__item {
+      display: flex;
+      justify-content: left; } }
+  @media screen and (max-width: 426px) {
+    main .table__item {
+      display: flex;
+      justify-content: left; } }
 
 main .ContainerStaff__fotoDuenos--tamanio {
   width: 100%; }
@@ -196,24 +226,3 @@ form select {
 
 form textarea {
   margin-top: 20px; }
-
-table {
-  color: black;
-  border: solid 5px chocolate;
-  margin: auto;
-  margin-bottom: 70px;
-  background: #F7DC6F;
-  font-family: sans-serif;
-  max-width: 1.5rem; }
-
-th {
-  background-color: #F1C40F;
-  padding: 2rem;
-  font-weight: bold; }
-
-tr {
-  background-color: #2ECC71; }
-
-td {
-  padding: .7rem;
-  background-color: #FCF3CF; }

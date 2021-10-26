@@ -1,14 +1,6 @@
-$bordeFotosHome: #0a3955;
 $colorFrioGral: #0a3955;
 $fondoClaro: #F4F9F9;
 $floralwhite: floralwhite;
 $tamanioTitulo: 55px;
 $tamanioEnlacesFooter: 35px;
 $colorForm:#CCF2F4;
-
-// Mixin borde redondeados
-@mixin bordeRedondeado {
-    border-bottom: solid 8px $bordeMarron;
-    border-radius: 20%;
-    margin-bottom: 20px;
-}
