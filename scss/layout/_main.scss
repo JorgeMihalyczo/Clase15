@@ -9,10 +9,12 @@ main{
         background-position: top top;
         background-attachment: fixed;
         align-items: center;
-        justify-content: center;
+        @include movil{
+            background-position: center;
+        }
     }
     #hero .container{
-        height: 50vh;
+        height: 60vh;
     }
     .hero__p--style{
         color: white;
@@ -32,7 +34,6 @@ main{
         border-radius: 50%;
         width: 150px;
         &:hover{
-            transform: scale(1.08);
             border: solid $colorFrioGral 1px;
         }
     }
@@ -49,7 +50,7 @@ main{
             grid-auto-rows: auto;
         }
         @include movil{
-            margin:0;
+            margin-left: 2%;
             width: 98%;
             grid-auto-rows: auto;
         }
@@ -86,6 +87,30 @@ main{
             display: flex;
             justify-content:left;
         }
+    }
+    .productos{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        @include movil{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .productos__containerItem{
+        display: grid;
+        gap: 1rem;
+        padding: 50px 25px;
+        justify-content: center;
+       // background-color: #f2f2f2;
+    }
+    .productos__containerItem--foto{
+        @extend .aside__containerProductos--border;
+        justify-self: center;
+        animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 1.5s; /* don't forget to set a duration! */
+    }
+    .productos__containerItem--parrafo{
+        justify-self: center;
     }
     .ContainerStaff__fotoDuenos--tamanio{
         width:100%;

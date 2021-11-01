@@ -5,13 +5,18 @@ body{
         text-align: center;
         text-decoration: underline;
         color: $colorFrioGral;
-        margin-top: 2rem;
+        margin-top: 3rem;
         margin-bottom: 4rem;
+    }
+    .centrar{
+        text-align: center;
+    }
+    .espaciadoLetras{
+        letter-spacing: 0.5rem;
     }
     h2{
         font-size: 1.6rem;
         text-align: center;
-        margin-top: 2rem;
         margin-bottom: 30px;
         color: $colorFrioGral;
     }
@@ -25,7 +30,8 @@ body{
         border-radius: 11px;
         letter-spacing: 1px;
         font-size: 1.4rem;
-        padding: 1.5rem;
+        padding: 0 1rem;
+        line-height: 3rem;
     } 
     a{
         text-decoration: none;
