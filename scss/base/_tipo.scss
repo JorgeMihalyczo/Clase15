@@ -1,10 +1,12 @@
 // Tipografias 
 @import "utilities/variables";
 body{
+    font-family: 'kalam';
     .title{
         text-align: center;
         text-decoration: underline;
         color: $colorFrioGral;
+        font-size: 3rem;
         margin-top: 3rem;
         margin-bottom: 4rem;
     }
@@ -25,7 +27,6 @@ body{
         text-align: center;
     }
     p{
-        font-family: 'Roboto', sans-serif;
         color: $colorFrioGral;
         border-radius: 11px;
         letter-spacing: 1px;

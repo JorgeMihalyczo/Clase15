@@ -1,10 +1,9 @@
 // Estilos del footer 
 footer{
-    //background: linear-gradient(180deg, rgba(244,249,249,1) 0%, rgba(204,242,244,1) 50%, rgba(70,187,247,1) 100%);
     background-color: #1f2024;
     border-top: solid 2px black;
     margin-top: 100px;
-    padding-left: 0rem;
+    //padding-left: 0rem;
     padding-bottom: 15px;
     max-height: 100vh;
     color: #878792;
@@ -21,8 +20,8 @@ footer{
         }
     }
     .footer__enlacesEstilo{
-        font-size: 1.5rem;
-        font-style: italic;
+        font-size: 1.3rem;
+        font-weight: 200;
         justify-content: space-around;
         @include tablet{
             justify-content: space-around !important;
