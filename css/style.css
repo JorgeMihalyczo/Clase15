@@ -7,6 +7,9 @@
     background-image: url("../pics/montanas2.png");
     background-repeat: space;
     background-blend-mode: color-burn; }
+    @media screen and (max-width: 426px) {
+      * body {
+        background-image: unset; } }
 
 body {
   font-family: 'kalam'; }
@@ -165,9 +168,7 @@ main .productos__containerItem {
 main .productos__containerItem--foto {
   justify-self: center;
   animation: zoomIn;
-  /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 1.5s;
-  /* don't forget to set a duration! */ }
+  animation-duration: 1.5s; }
 
 main .productos__containerItem--parrafo {
   justify-self: center; }

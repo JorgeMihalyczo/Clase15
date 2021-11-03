@@ -78,7 +78,6 @@ main{
         display: flex;
         justify-content: center;
         align-items: center;
-
         @include tablet{
             display: flex;
             justify-content:left;
@@ -106,8 +105,8 @@ main{
     .productos__containerItem--foto{
         @extend .aside__containerProductos--border;
         justify-self: center;
-        animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
-        animation-duration: 1.5s; /* don't forget to set a duration! */
+        animation: zoomIn; 
+        animation-duration: 1.5s; 
     }
     .productos__containerItem--parrafo{
         justify-self: center;

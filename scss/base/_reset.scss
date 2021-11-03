@@ -1,5 +1,7 @@
 // Reset del navegador 
 @import "utilities/variables";
+@import "layout/responsive";
+
 * {
     margin: 0;
     padding: 0;
@@ -9,5 +11,8 @@
         background-image: url('../pics/montanas2.png');
         background-repeat:space;
         background-blend-mode:color-burn;
+        @include movil{
+            background-image:unset;
+        }
     }
 }
