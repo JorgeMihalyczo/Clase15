@@ -28,7 +28,19 @@ btnProducto[4].onclick = () =>{
 btnProducto[5].onclick = () =>{
     agregarKitMate();
 }
+document.getElementById("btnTotal").onclick = () =>{
+    calculaTotal();
+}
 
+/*     if (sessionStorage.getItem("listaPedidos") != null){
+        let contenedorPedido = getElementById("productos__carrito");
+        let imprimirLista = sessionStorage.getItem("listaPedidos");
+        for (const prod of imprimirLista){
+        contenedorPedido.appendChild(`<p>${prod}<p/>`);
+        }
+    }else{
+        continue;
+    } */
 // Funciones
 function agregarAmanda(){
     let cantidad = parseInt(document.getElementsByClassName("cant")[0].value);
@@ -41,6 +53,8 @@ function agregarAmanda(){
     campoTotal.setAttribute("id", "nuevoElemento");
     campoTotal.setAttribute("value", `Total: $${precioFinal}`);
     document.getElementById("amanda").appendChild(campoTotal);
+    //guarda pedido de amanda en el sessionStorage 
+    guardaLocal("listaPedidos", JSON.stringify(listaPedidos));
 }
 function agregarPipore(){
     let cantidad = parseInt(document.getElementsByClassName("cant")[1].value);
@@ -53,6 +67,8 @@ function agregarPipore(){
     campoTotal.setAttribute("id", "nuevoElemento");
     campoTotal.setAttribute("value", `Total: $${precioFinal}`);
     document.getElementById("pipore").appendChild(campoTotal);
+    //guarda pedido de pipore en el sessionStorage 
+    guardaLocal("listaPedidos", JSON.stringify(listaPedidos));
 }
 function agregarTaragui(){
     let cantidad = parseInt(document.getElementsByClassName("cant")[2].value);
@@ -65,6 +81,7 @@ function agregarTaragui(){
     campoTotal.setAttribute("id", "nuevoElemento");
     campoTotal.setAttribute("value", `Total: $${precioFinal}`);
     document.getElementById("taragui").appendChild(campoTotal);
+    guardaLocal("listaPedidos", JSON.stringify(listaPedidos));
 }
 function agregarDulce(){
     let cantidad = parseInt(document.getElementsByClassName("cant")[3].value);
@@ -77,6 +94,7 @@ function agregarDulce(){
     campoTotal.setAttribute("id", "nuevoElemento");
     campoTotal.setAttribute("value", `Total: $${precioFinal}`);
     document.getElementById("dulce").appendChild(campoTotal);
+    guardaLocal("listaPedidos", JSON.stringify(listaPedidos));
 }
 function agregarAlfajores(){
     let cantidad = parseInt(document.getElementsByClassName("cant")[4].value);
@@ -89,6 +107,7 @@ function agregarAlfajores(){
     campoTotal.setAttribute("id", "nuevoElemento");
     campoTotal.setAttribute("value", `Total: $${precioFinal}`);
     document.getElementById("alfajor").appendChild(campoTotal);
+    guardaLocal("listaPedidos", JSON.stringify(listaPedidos));
 }
 function agregarKitMate(){
     let cantidad = parseInt(document.getElementsByClassName("cant")[5].value);
@@ -101,4 +120,18 @@ function agregarKitMate(){
     campoTotal.setAttribute("id", "nuevoElemento");
     campoTotal.setAttribute("value", `Total: $${precioFinal}`);
     document.getElementById("mate").appendChild(campoTotal);
+    guardaLocal("listaPedidos", JSON.stringify(listaPedidos));
+}
+const guardaLocal = (clave, valor) => {
+    sessionStorage.setItem(clave, valor);
+}
+function calculaTotal(){
+        // lee el pedido de amanda del sessionStorage para mostrarlo en un <p> dentro del div productos__carrito
+        let imprimirLista = JSON.parse(sessionStorage.getItem("listaPedidos"));
+        let contenedorPedido = document.getElementById("productos__carrito");
+        for (const prod of imprimirLista){
+            let parrafo = document.createElement("p");
+            parrafo.innerHTML = prod;
+            contenedorPedido.appendChild(parrafo);
+            }
 }
