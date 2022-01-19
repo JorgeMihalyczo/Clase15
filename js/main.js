@@ -10,49 +10,54 @@ const listaPedidos = [];
 const btnProducto = document.querySelectorAll("#btnProducto");
 console.log(btnProducto);
 
-btnProducto[0].onclick = () =>{
+
+$("#btnProducto").click(() => { 
     agregarAmanda();
-}
+    $("#amanda").show("slow");
+});
+
+/* btnProducto[0].onclick = () =>{
+    agregarAmanda();
+    
+} */
 btnProducto[1].onclick = () =>{
     agregarPipore();
+    $("#pipore").show("slow");
 }
 btnProducto[2].onclick = () =>{
     agregarTaragui();
+    $("#taragui").show("slow");
 }
 btnProducto[3].onclick = () =>{
     agregarDulce();
+    $("#dulce").show("slow");
 }
 btnProducto[4].onclick = () =>{
     agregarAlfajores();
+    $("#havanna").show("slow");
 }
 btnProducto[5].onclick = () =>{
     agregarKitMate();
-}
-document.getElementById("btnTotal").onclick = () =>{
-    calculaTotal();
+    $("#mate").show("slow");
 }
 
-/*     if (sessionStorage.getItem("listaPedidos") != null){
-        let contenedorPedido = getElementById("productos__carrito");
-        let imprimirLista = sessionStorage.getItem("listaPedidos");
-        for (const prod of imprimirLista){
-        contenedorPedido.appendChild(`<p>${prod}<p/>`);
-        }
-    }else{
-        continue;
-    } */
+$("#btnTotal").click( () =>{
+    calculaTotal();
+    $("#productos__carrito").fadeIn("slow");
+})
+
 // Funciones
 function agregarAmanda(){
     let cantidad = parseInt(document.getElementsByClassName("cant")[0].value);
     let total = parseFloat(productos[0].precio * cantidad);
     let precioFinal = (total * 1.21).toFixed(2);
-    let pedido = `Cantidad de unidades de Yerba Amanda compradas: ${cantidad} X ${productos[0].precio} = ${total} ****** Precio final con IVA:  ${precioFinal}`;
+    let pedido = `<h2>Cantidad de unidades de Yerba Amanda compradas: ${cantidad} X ${productos[0].precio} = ${total}.  Precio final con IVA:  ${precioFinal}</h2>`;
     listaPedidos.push(pedido);
     // Crear etiqueta p para mostrar el total de la cantidad seleccionada
     let campoTotal = document.createElement("input");
     campoTotal.setAttribute("id", "nuevoElemento");
     campoTotal.setAttribute("value", `Total: $${precioFinal}`);
-    document.getElementById("amanda").appendChild(campoTotal);
+    $("#amanda").prepend(campoTotal);
     //guarda pedido de amanda en el sessionStorage 
     guardaLocal("listaPedidos", JSON.stringify(listaPedidos));
 }
@@ -60,7 +65,7 @@ function agregarPipore(){
     let cantidad = parseInt(document.getElementsByClassName("cant")[1].value);
     let total = parseFloat(productos[1].precio * cantidad);
     let precioFinal = (total * 1.21).toFixed(2);
-    let pedido = `Cantidad de unidades de Yerba Pipore compradas: ${cantidad} X ${productos[1].precio} = ${total} ****** Precio final con IVA:  ${precioFinal}`;
+    let pedido = `<h2>Cantidad de unidades de Yerba Amanda compradas: ${cantidad} X ${productos[1].precio} = ${total}.  Precio final con IVA:  ${precioFinal}</h2>`;
     listaPedidos.push(pedido);
     // Crear etiqueta p para mostrar el total de la cantidad seleccionada
     let campoTotal = document.createElement("input");
@@ -74,7 +79,7 @@ function agregarTaragui(){
     let cantidad = parseInt(document.getElementsByClassName("cant")[2].value);
     let total = parseFloat(productos[2].precio * cantidad);
     let precioFinal = (total * 1.21).toFixed(2);
-    let pedido = `Cantidad de unidades de Yerba Taragüi compradas: ${cantidad} X ${productos[2].precio} = ${total} ****** Precio final con IVA:  ${precioFinal}`;
+    let pedido = `<h2>Cantidad de unidades de Yerba Amanda compradas: ${cantidad} X ${productos[2].precio} = ${total}.  Precio final con IVA:  ${precioFinal}</h2>`;
     listaPedidos.push(pedido);
     // Crear etiqueta p para mostrar el total de la cantidad seleccionada
     let campoTotal = document.createElement("input");
@@ -87,7 +92,7 @@ function agregarDulce(){
     let cantidad = parseInt(document.getElementsByClassName("cant")[3].value);
     let total = parseFloat(productos[3].precio * cantidad);
     let precioFinal = (total * 1.21).toFixed(2);
-    let pedido = `Cantidad de unidades de Dulce de Leche compradas: ${cantidad} X ${productos[3].precio} = ${total} ****** Precio final con IVA:  ${precioFinal}`;
+    let pedido = `<h2>Cantidad de unidades de Yerba Amanda compradas: ${cantidad} X ${productos[3].precio} = ${total}.  Precio final con IVA:  ${precioFinal}</h2>`;
     listaPedidos.push(pedido);
     // Crear etiqueta p para mostrar el total de la cantidad seleccionada
     let campoTotal = document.createElement("input");
@@ -100,20 +105,20 @@ function agregarAlfajores(){
     let cantidad = parseInt(document.getElementsByClassName("cant")[4].value);
     let total = parseFloat(productos[4].precio * cantidad);
     let precioFinal = (total * 1.21).toFixed(2);
-    let pedido = `Cantidad de unidades de Alfajores compradas: ${cantidad} X ${productos[4].precio} = ${total} ****** Precio final con IVA:  ${precioFinal}`;
+    let pedido = `<h2>Cantidad de unidades de Yerba Amanda compradas: ${cantidad} X ${productos[4].precio} = ${total}.  Precio final con IVA:  ${precioFinal}</h2>`;
     listaPedidos.push(pedido);
     // Crear etiqueta p para mostrar el total de la cantidad seleccionada
     let campoTotal = document.createElement("input");
     campoTotal.setAttribute("id", "nuevoElemento");
     campoTotal.setAttribute("value", `Total: $${precioFinal}`);
-    document.getElementById("alfajor").appendChild(campoTotal);
+    document.getElementById("havanna").appendChild(campoTotal);
     guardaLocal("listaPedidos", JSON.stringify(listaPedidos));
 }
 function agregarKitMate(){
     let cantidad = parseInt(document.getElementsByClassName("cant")[5].value);
     let total = parseFloat(productos[5].precio * cantidad);
     let precioFinal = (total * 1.21).toFixed(2);
-    let pedido = `Cantidad de unidades de Kits de Mate compradas: ${cantidad} X ${productos[5].precio} = ${total} ****** Precio final con IVA:  ${precioFinal}`;
+    let pedido = `<h2>Cantidad de unidades de Yerba Amanda compradas: ${cantidad} X ${productos[5].precio} = ${total}.  Precio final con IVA:  ${precioFinal}</h2>`;
     listaPedidos.push(pedido);
     // Crear etiqueta p para mostrar el total de la cantidad seleccionada
     let campoTotal = document.createElement("input");
@@ -122,8 +127,8 @@ function agregarKitMate(){
     document.getElementById("mate").appendChild(campoTotal);
     guardaLocal("listaPedidos", JSON.stringify(listaPedidos));
 }
-const guardaLocal = (clave, valor) => {
-    sessionStorage.setItem(clave, valor);
+const guardaLocal = (key, value) => {
+    sessionStorage.setItem(key, value);
 }
 function calculaTotal(){
         // lee el pedido de amanda del sessionStorage para mostrarlo en un <p> dentro del div productos__carrito
