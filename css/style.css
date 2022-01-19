@@ -164,6 +164,9 @@ main .productos__containerItem {
   gap: 1rem;
   padding: 50px 25px;
   justify-content: center; }
+  main .productos__containerItem > div {
+    width: auto;
+    display: none; }
 
 main .productos__containerItem--foto {
   justify-self: center;
@@ -172,6 +175,12 @@ main .productos__containerItem--foto {
 
 main .productos__containerItem--parrafo {
   justify-self: center; }
+
+main #productos__carrito {
+  background-color: #e4e7ec;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center; }
 
 main .ContainerStaff__fotoDuenos--tamanio {
   width: 100%; }
