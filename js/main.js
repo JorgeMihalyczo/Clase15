@@ -1,3 +1,33 @@
+$( document ).ready(function(){
+    console.log( "El DOM esta listo" );
+
+    const url = "https://jsonplaceholder.typicode.com/posts/1/comments";
+
+    $("#ejemploGet").on("click", function(){
+        $.getJSON(url, function(data, status){
+            let datos = data;
+            console.log(status)
+            if(status == "success"){
+                for(const dato of datos) {
+                    $("#getData").append(
+                        `
+                        <div id="${dato.id}">
+                            <h2>Nombre: ${dato.name}</h2>
+                            <h2>Email: ${dato.email}</h2>
+                            <p>${dato.body}</p>
+                        </div>
+                        `
+                    )
+                }
+            } else {
+                alert("la api no funciona actualmente");
+            }
+        })
+
+    })
+
+});
+
 const productos = [
     {nombreProducto: "Yerba Amanda", precio: 8.00, peso: "1kg"},
     {nombreProducto: "Yerba Pipore", precio: 7.49, peso: "1kg"},
@@ -7,19 +37,15 @@ const productos = [
     {nombreProducto: "Kit de Mate", precio: 15.49, peso: "null"}];
 
 const listaPedidos = [];
-const btnProducto = document.querySelectorAll("#btnProducto");
+const btnProducto = document.querySelectorAll(".btnProducto");
 console.log(btnProducto);
 
 
-$("#btnProducto").click(() => { 
+
+btnProducto[0].onclick = () =>{
     agregarAmanda();
     $("#amanda").show("slow");
-});
-
-/* btnProducto[0].onclick = () =>{
-    agregarAmanda();
-    
-} */
+} 
 btnProducto[1].onclick = () =>{
     agregarPipore();
     $("#pipore").show("slow");
@@ -46,6 +72,10 @@ $("#btnTotal").click( () =>{
     $("#productos__carrito").fadeIn("slow");
 })
 
+$(".productos__containerItem--foto").click( () =>{
+    cantidad.value++;
+})
+
 // Funciones
 function agregarAmanda(){
     let cantidad = parseInt(document.getElementsByClassName("cant")[0].value);
@@ -57,7 +87,7 @@ function agregarAmanda(){
     let campoTotal = document.createElement("input");
     campoTotal.setAttribute("id", "nuevoElemento");
     campoTotal.setAttribute("value", `Total: $${precioFinal}`);
-    $("#amanda").prepend(campoTotal);
+    $("#amanda").append(campoTotal);
     //guarda pedido de amanda en el sessionStorage 
     guardaLocal("listaPedidos", JSON.stringify(listaPedidos));
 }
