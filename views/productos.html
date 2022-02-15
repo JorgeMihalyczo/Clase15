@@ -56,65 +56,18 @@
     </header>
     <!-- inicio main -->
     <main>
-        <h1 class="title">Productos</h1>
-        <div class="productos">
-            <div class="productos__containerItem">
-                <h3>Yerba Amanda - 1kg</h3>
-                <img src="../pics/amanda.jpg" alt="yerbaAmanda" class="productos__containerItem--foto">
-                <p class="productos__containerItem--parrafo">8.00€</p>
-                <label for="cant" class="cantNegrita">Cantidad: </label>
-                <input type="text" class="cant" value="1">
-                <button type="button" class="btnProducto">Agregar al carrito</button>
-                <div id="amanda"></div>
-            </div>
-            <div class="productos__containerItem">
-                <h3>Yerba Pipore - 1kg</h3>
-                <img src="../pics/pipore.jpg" alt="yerbaPipore" class="productos__containerItem--foto">
-                <p class="productos__containerItem--parrafo">7.49€</p>
-                <label for="cant">Cantidad: </label>
-                <input type="text" class="cant" value="1">
-                <button type="button" class="btnProducto">Agregar al carrito</button>
-                <div id="pipore"></div>
-            </div>
-            <div class="productos__containerItem">
-                <h3>Yerba Taragüi - 1kg</h3>
-                <img src="../pics/taragui.jpg" alt="yerbaTaragui" class="productos__containerItem--foto">
-                <p class="productos__containerItem--parrafo">6.50€</p>
-                <label for="cant">Cantidad: </label>
-                <input type="text" class="cant" value="1">
-                <button type="button" class="btnProducto">Agregar al carrito</button>
-                <div id="taragui"></div>
-            </div>
-            <div class="productos__containerItem">
-                <h3>Dulce de Leche Patagon - 450g</h3>
-                <img src="../pics/patagonDulce.jpg" alt="dulcePatagon" class="productos__containerItem--foto">
-                <p class="productos__containerItem--parrafo">4.00€</p>
-                <label for="cant">Cantidad: </label>
-                <input type="text" class="cant" value="1">
-                <button type="button" class="btnProducto">Agregar al carrito</button>
-                <div id="dulce"></div>
-            </div>
-            <div class="productos__containerItem">
-                <h3>Alfajores Havana / 12 unidades</h3>
-                <img src="../pics/havanna.jpg" alt="alfajores" class="productos__containerItem--foto animate__animated animate__bounce">
-                <p class="productos__containerItem--parrafo">13.50€</p>
-                <label for="cant">Cantidad: </label>
-                <input type="text" class="cant" value="1">
-                <button type="button" class="btnProducto">Agregar al carrito</button>
-                <div id="havanna"></div>
-            </div>
-            <div class="productos__containerItem">
-                <h3>Kit de Mate</h3>
-                <img src="../pics/kitMate2.jpg" alt="kitMate" class="productos__containerItem--foto">
-                <p class="productos__containerItem--parrafo">15.49€</p>
-                <label for="cant">Cantidad: </label>
-                <input type="text" class="cant" value="1">
-                <button type="button" class="btnProducto">Agregar al carrito</button>
-                <div id="mate"></div>
+        <div class="containerCarrito">
+            <img id="iconoCarrito"  src="../pics/carrito-de-compras.png" alt="carrito"> 
+            <p id="contadorItems"></p>
+            <div class="itemsCarrito">
+                <div class="listaProductos"></div>
+                <p class="containerTotal"></p>
+                <button class="btnFinalizar">Finalizar Compra</button>
             </div>
         </div>
-        <button type="button" id="btnTotal">TOTAL</button>
-        <div id="productos__carrito">
+        
+        <h1 class="title">Productos</h1>
+        <div class="productos">
         </div>
         <div class="helados shadow">
             <h1 class="title">Helados</h1>
