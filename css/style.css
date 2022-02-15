@@ -11,6 +11,13 @@
       * body {
         background-image: unset; } }
 
+.remove {
+  height: 25px; }
+
+.btnFinalizar {
+  font-size: 1.5rem;
+  padding: 5px; }
+
 body {
   font-family: 'kalam'; }
   body .title {
@@ -151,6 +158,34 @@ main .table__item {
       display: flex;
       justify-content: left; } }
 
+main .containerCarrito {
+  color: white;
+  text-align: right;
+  padding-right: 10px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end; }
+
+main #iconoCarrito {
+  cursor: pointer; }
+
+main .itemsCarrito {
+  background-color: #0a3955;
+  width: 24rem;
+  padding: 1rem;
+  opacity: 0.9;
+  position: fixed;
+  top: 14.3rem;
+  display: none; }
+
+main .listaProductos {
+  text-align: left; }
+
+main .containerTotal {
+  color: white;
+  text-align: center; }
+
 main .productos {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; }
@@ -270,3 +305,9 @@ form select {
 
 form textarea {
   margin-top: 20px; }
+
+.borderGreen {
+  border: #0cf80c solid 3px; }
+
+.borderRed {
+  border: #f80c0c solid 3px; }
